@@ -21,19 +21,14 @@ body{
 }
 
 a:link { color: #666;}
-/* <a href="URL"> 이 있는 a요소 */
-/* colon 콜론 link, 슈도클래스 선택자 */
 a:visited { color: #666;}
-/* a요소를 클릭하여 URL위치에 다녀온 것을 지칭 */
-a:hover { color: #666;} /* a요소에 마우스 포인터를 올렸을 때 */
+a:hover { color: #666;}
 a:active { color: #666;}
 
 /* a요소가 활성화되었을 때 */
 
 /* 기본 텍스트 크기 15px */
-a,b,em,i,p,q,li,td,th,u,span {
-    font-size: 15px;
-}
+/*a,b,em,i,p,q,li,td,th,u,span {font-size: 15px;}*/
 
 ul {
     list-style: none;
@@ -72,16 +67,11 @@ img {
 
 /* 배경이미지 적용 */
 
-div#outerwrap{
-    width: 100%;
-    height: 100%;
+body{
     background-image: url(../images/background.png);
     background-repeat: no-repeat;
-    background-size: cover;
-
-    position: fixed;
-    left: 0;
-    top: 0;
+    background-size: 100% 100%;
+    background-attachment: fixed; /* 배경이미지를 전체화면에 채워줌 */
 }
 
 div#wrap {
@@ -131,7 +121,6 @@ nav#gnb a:hover{
 
 main#main {
     width: 1056px;
-    display:flex;
     padding-left: 20px;
 }
 
@@ -156,19 +145,11 @@ div#greetingMsg{
     font-size: 19px;
 }
 
-
-aside#aside{
-    width: 1058px;
-    display: flex;
-    justify-content: space-between;
-    padding-left: 20px;
-    padding-right: 17px;
-}
-
 #customer ul{
     padding-top: 11px;
     list-style: square;
-    padding-left: 45px;
+    list-style-position: inside;
+    padding: 20px 0 0 20px;
     line-height: 25px;
 }
 
@@ -176,52 +157,71 @@ aside#aside{
     background-color: #e76c6e;
     color: #fff;
     font-weight: bold;
-    width: 280px;
-    height: 40px;
     padding: 10px;
-    margin-top: 20px;
 }
 
-#aside img{
-    margin: 5px;
-    width: 230px;
-    height: 200px;
+/* aside#aside */
 
-    border: 2px dotted #000;
-    border-radius: 20px;
+aside#aside{
+    width: 1058px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5px;
 }
 
-#aside a{
-    position: relative;
-}
-
-#aside a:hover{
-    width: 230px;
+aside#aside>div{
+    width: 252px;
     height: 230px;
-    background-color: rgba(255, 255, 255, 0.7);
 }
 
-#aside span{
+#aside>div:not(:first-child) {
+    border: 1px dotted #000;
+    border-radius: 10px;
+}
+
+#aside>div:first-child {
+    padding: 20px 0;
+}
+
+aside>div:nth-child(2){
+    background-image: url(../images/bg1.png);
+    background-repeat: no-repeat;
+    background-size: 180px 250px;
+}
+
+aside>div:nth-child(3){
+    background-image: url(../images/bg2.png);
+    background-repeat: no-repeat;
+    background-size: 180px 250px;
+}
+
+aside>div:nth-child(4){
+    background-image: url(../images/bg3.png);
+    background-repeat: no-repeat;
+    background-size: 180px 250px;
+}
+
+#aside div.flower{
+    height: 65px;
     text-align: right;
-    background-color: rgba(255, 255, 255, 0.7);
-    width: 230px;
-    padding-bottom: 10px;
-    padding-right: 15px;
+    background-color: rgba(255, 255, 255, 0.71);
+    padding: 1px 1px;
 
-    position: absolute;
-    top: 20px;
-    left: 0px;
+    position: relative;
+    top: 140px;
 }
 
-#aside a h2{
-    color: #8c3a69;
-    margin-bottom: 30px;
-    margin-right: -1px;
+#aside div.flower h3{
+    color: #3463af;
+    font-size: 24px;
 }
 
-#aside a b{
-    color: #4777d4;
+#aside div.flower h4{
+    margin-top: 20px;
+    color: #7e287b;
 }
+
+
 
 /* 메인 영역 끝 */
 
@@ -242,7 +242,12 @@ ul#lnbList {
     margin: 0 10px;
 }
 
-#footer span{
+#footer a:hover { /* 작업 지시사항 2번 */
+    font-weight: bold;
+    color: rgba(102, 102, 102, 0.39);
+}
+
+#footer #copyright{
     position: absolute;
     top: 20px;
     left: 950px;
