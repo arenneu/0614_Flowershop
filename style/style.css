@@ -1,0 +1,252 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+
+/* Reset 설정 시작 */
+
+* {
+    color: #333;
+    /* 기본 텍스트 색상 */
+    font-family: 'Nanum Gothic', sans-serif;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #fff;
+}
+
+a:link { color: #666;}
+/* <a href="URL"> 이 있는 a요소 */
+/* colon 콜론 link, 슈도클래스 선택자 */
+a:visited { color: #666;}
+/* a요소를 클릭하여 URL위치에 다녀온 것을 지칭 */
+a:hover { color: #666;} /* a요소에 마우스 포인터를 올렸을 때 */
+a:active { color: #666;}
+
+/* a요소가 활성화되었을 때 */
+
+/* 기본 텍스트 크기 15px */
+a,b,em,i,p,q,li,td,th,u,span {
+    font-size: 15px;
+}
+
+ul {
+    list-style: none;
+/* lisn 에밋코드*/
+}
+
+img {
+    vertical-align: middle;
+}
+
+.flexContainer {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+
+/*Reset 설정 끝 */
+
+
+
+/* 보더라인 */
+
+/*div#wrap {    border: 1px solid #000;}*/
+/*header#header {    border: 1px solid #000;}*/
+/*nav#gnb {    border: 1px solid #000;}*/
+/*div#contents { border: 1px solid #000;}*/
+/*main#main { border: 1px solid #000;}*/
+/*aside#aside {    border: 1px solid #000;}*/
+/*div#customer {    border: 1px solid #000;}*/
+/*div#flower01 {    border: 1px solid #000;}*/
+/*div#flower02 {    border: 1px solid #000;}*/
+/*div#flower03 {    border: 1px solid #000;}*/
+/*footer#footer {    border: 1px solid #000;}*/
+
+/* 배경이미지 적용 */
+
+div#outerwrap{
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+div#wrap {
+    width: 1060px;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #aaa;
+}
+
+/* 헤더 영역 시작 */
+
+/* header#header */
+header#header{
+    width: 1060px;
+    height: 195px;
+}
+
+/* nav#gnb */
+
+nav#gnb {
+    padding: 20px;
+    padding-left: 30px;
+    background: #c51a3a;
+}
+
+nav#gnb a {
+    padding: 14px 10px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 15px;
+
+}
+
+nav#gnb a:hover{
+    color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+/* 작업지시사항 1번 */
+
+
+/* 헤더 영역 끝 */
+
+/* 메인 영역 시작 */
+
+/* div#contents */
+/* main#main */
+
+main#main {
+    width: 1056px;
+    display:flex;
+    padding-left: 20px;
+}
+
+div#shopImg{
+    padding: 20px;
+}
+
+div#greetingMsg{
+    padding: 50px 30px;
+}
+
+#greetingMsg h2 {
+    padding-left: 19px;
+    margin-bottom: 26px;
+}
+
+
+#greetingMsg p {
+    color: #d15401;
+    font-weight: bold;
+    line-height: 30px;
+    font-size: 19px;
+}
+
+
+aside#aside{
+    width: 1058px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 17px;
+}
+
+#customer ul{
+    padding-top: 11px;
+    list-style: square;
+    padding-left: 45px;
+    line-height: 25px;
+}
+
+#customer h3{
+    background-color: #e76c6e;
+    color: #fff;
+    font-weight: bold;
+    width: 280px;
+    height: 40px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+#aside img{
+    margin: 5px;
+    width: 230px;
+    height: 200px;
+
+    border: 2px dotted #000;
+    border-radius: 20px;
+}
+
+#aside a{
+    position: relative;
+}
+
+#aside a:hover{
+    width: 230px;
+    height: 230px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+#aside span{
+    text-align: right;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 230px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+
+    position: absolute;
+    top: 20px;
+    left: 0px;
+}
+
+#aside a h2{
+    color: #8c3a69;
+    margin-bottom: 30px;
+    margin-right: -1px;
+}
+
+#aside a b{
+    color: #4777d4;
+}
+
+/* 메인 영역 끝 */
+
+/* 푸터 영역 시작 */
+
+#footer{
+    position: relative;
+    border-top: 1px solid #aaa;
+}
+
+ul#lnbList {
+    padding: 20px;
+    padding-left: 20px;
+}
+
+#footer a {
+    font-size: 12px;
+    margin: 0 10px;
+}
+
+#footer span{
+    position: absolute;
+    top: 20px;
+    left: 950px;
+    font-size: 13px;
+}
+
+/* 푸터 영역 끝 */
